@@ -65,7 +65,7 @@ export default function App() {
           style={{
             backgroundColor: "tomato",
             width: 100,
-            height: 100,
+            height: 200,
           }}
         />
       </View>
