@@ -37,7 +37,7 @@ export default function App() {
     <SafeAreaView style={[styles.container]}>
       <View
         style={{
-          backgroundColor: "dodgerblue",
+          // backgroundColor: "dodgerblue",
           width: "100%",
           height: landscape ? "100%" : "30%",
           flex: 1,
@@ -45,41 +45,12 @@ export default function App() {
           justifyContent: "center",
           alignItems: "center",
         }}
-      >
-        <View
-          style={{
-            backgroundColor: "black",
-            width: 100,
-            height: 300,
-            alignSelf: "flex-start",
-          }}
-        />
-        <View
-          style={{
-            backgroundColor: "white",
-            width: 100,
-            height: 200,
-          }}
-        />
-        <View
-          style={{
-            backgroundColor: "tomato",
-            width: 100,
-            height: 200,
-          }}
-        />
-      </View>
+      ></View>
+
       <Text numberOfLines={1}>Hello my iphone</Text>
       {/* <Image source={require("./assets/icon.png")} /> */}
       <TouchableHighlight onPress={handlePress}>
-        <Image
-          blurRadius={0}
-          source={{
-            width: 200,
-            height: 300,
-            uri: "https://picsum.photos/200/300",
-          }}
-        />
+        <Image blurRadius={0} source={require("./app/assets/background.jpg")} />
       </TouchableHighlight>
 
       <Button title="click me" onPress={buttonPress} />
