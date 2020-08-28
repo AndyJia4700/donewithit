@@ -1,10 +1,23 @@
 //  type  'rsf'
 
 import React from "react";
-import { StyleSheet, Text, View, ImageBackground } from "react-native";
+import { StyleSheet, Text, View, ImageBackground, Image } from "react-native";
 
-export default function WelcomeScreen() {
-  return <ImageBackground source={require("../assets/background.jpg")} />;
+export default function WelcomeScreen(props) {
+  return (
+    <ImageBackground
+      style={styles.background}
+      source={require("../assets/background.jpg")}
+    >
+      <View style={styles.logoContainer}>
+        <Image style={styles.logo} source={require("../assets/logo-red.png")} />
+        <Text>Sell What You Don't Need</Text>
+      </View>
+
+      <View style={styles.loginButton}></View>
+      <View style={styles.registerButton}></View>
+    </ImageBackground>
+  );
 }
 
 // type 'rnss
@@ -14,5 +27,26 @@ export default function WelcomeScreen() {
 const styles = StyleSheet.create({
   background: {
     flex: 1,
+    justifyContent: "flex-end",
+    alignItems: "center",
+  },
+  logo: {
+    width: 100,
+    height: 100,
+  },
+  logoContainer: {
+    position: "absolute",
+    top: 100,
+    alignItems: "center",
+  },
+  loginButton: {
+    width: "100%",
+    height: 70,
+    backgroundColor: "#fc5c65",
+  },
+  registerButton: {
+    width: "100%",
+    height: 70,
+    backgroundColor: "#4ecdc4",
   },
 });

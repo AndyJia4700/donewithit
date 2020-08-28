@@ -18,55 +18,10 @@ import {
   useDimensions,
   useDeviceOrientation,
 } from "@react-native-community/hooks";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
 
 export default function App() {
-  const handlePress = () => console.log("Image Pressed");
-  const buttonPress = () =>
-    Alert.alert("My Title", "My Message", [
-      { text: "Yes", onPress: () => console.log("Yes") },
-      { text: "No", onPress: () => console.log("No") },
-    ]);
-
-  console.log(Dimensions.get("screen"));
-  console.log(useDimensions());
-  console.log(useDeviceOrientation());
-
-  const { landscape } = useDeviceOrientation();
-
-  return (
-    <SafeAreaView style={[styles.container]}>
-      <View
-        style={{
-          // backgroundColor: "dodgerblue",
-          width: "100%",
-          height: landscape ? "100%" : "30%",
-          flex: 1,
-          flexDirection: "row",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      ></View>
-
-      <Text numberOfLines={1}>Hello my iphone</Text>
-      {/* <Image source={require("./assets/icon.png")} /> */}
-      <TouchableHighlight onPress={handlePress}>
-        <Image blurRadius={0} source={require("./app/assets/background.jpg")} />
-      </TouchableHighlight>
-
-      <Button title="click me" onPress={buttonPress} />
-      <StatusBar style="auto" />
-    </SafeAreaView>
-  );
+  // return <WelcomeScreen />;
+  return <ViewImageScreen />;
 }
-
-const containerStyle = { backgroundColor: "orange" };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "orange",
-    alignItems: "center",
-    justifyContent: "center",
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  },
-});
