@@ -20,48 +20,52 @@ import {
 } from "@react-native-community/hooks";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
-import AppText from "./app/components/AppText";
+import AppText from "./app/components/AppText/AppText";
+import { MaterialIcons } from "@expo/vector-icons";
 
 export default function App() {
   // return <WelcomeScreen />;
   // return <ViewImageScreen />;
   return (
-    // <View
-    //   style={{
-    //     flex: 1,
-    //     justifyContent: "center",
-    //     alignItems: "center",
-    //   }}
-    // >
-    //   <View
-    //     style={{
-    //       backgroundColor: "dodgerblue",
-    //       width: 100,
-    //       height: 100,
-    //       // borderWidth: 10,
-    //       // borderColor: "royablue",
-    //       // borderRadius: 50,
-    //       // borderTopWidth: 20,
-    //       // borderTopLeftRadius: 50,
+    <SafeAreaView>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <View
+          style={{
+            backgroundColor: "dodgerblue",
+            width: 100,
+            height: 100,
+            // borderWidth: 10,
+            // borderColor: "royablue",
+            // borderRadius: 50,
+            // borderTopWidth: 20,
+            // borderTopLeftRadius: 50,
 
-    //       // shadowColor: "red",
-    //       // shadowOffset: { width: 10, height: 10 },
-    //       // shadowOpacity: 1,
-    //       // shadowRadius: 10,
+            // shadowColor: "red",
+            // shadowOffset: { width: 10, height: 10 },
+            // shadowOpacity: 1,
+            // shadowRadius: 10,
 
-    //       //Android
-    //       // elevation: 20,
-    //     }}
-    //   ></View>
-    // </View>
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <AppText>I Love React Native</AppText>
-    </View>
+            //Android
+            // elevation: 20,
+          }}
+        ></View>
+      </View>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <MaterialIcons name="email" size={200} color="dodgerblue" />
+        <AppText>I Love React Native!</AppText>
+      </View>
+    </SafeAreaView>
   );
 }
