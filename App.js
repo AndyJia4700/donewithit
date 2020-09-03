@@ -22,50 +22,26 @@ import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import AppText from "./app/components/AppText/AppText";
 import { MaterialIcons } from "@expo/vector-icons";
+import AppButton from "./app/components/AppButton";
+import Card from "./app/components/Card";
 
 export default function App() {
   // return <WelcomeScreen />;
-  // return <ViewImageScreen />;
   return (
-    <SafeAreaView>
-      <View
-        style={{
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <View
-          style={{
-            backgroundColor: "dodgerblue",
-            width: 100,
-            height: 100,
-            // borderWidth: 10,
-            // borderColor: "royablue",
-            // borderRadius: 50,
-            // borderTopWidth: 20,
-            // borderTopLeftRadius: 50,
-
-            // shadowColor: "red",
-            // shadowOffset: { width: 10, height: 10 },
-            // shadowOpacity: 1,
-            // shadowRadius: 10,
-
-            //Android
-            // elevation: 20,
-          }}
-        ></View>
-      </View>
-      <View
-        style={{
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <MaterialIcons name="email" size={200} color="dodgerblue" />
-        <AppText>I Love React Native!</AppText>
-      </View>
-    </SafeAreaView>
+    <View
+      style={{
+        backgroundColor: "#f8f4f4",
+        padding: 20,
+        paddingTop: 100,
+      }}
+    >
+      <Card
+        title="Red jacket for sale"
+        subtitle="$100"
+        image={require("./app/assets/jacket.jpg")}
+      />
+    </View>
   );
 }
+
+const styles = StyleSheet.create({});
