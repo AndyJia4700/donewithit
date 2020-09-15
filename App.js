@@ -27,6 +27,7 @@ import Card from "./app/components/Card";
 
 export default function App() {
   // return <WelcomeScreen />;
+  
   return (
     <View
       style={{
