@@ -24,24 +24,29 @@ import AppText from "./app/components/AppText/AppText";
 import { MaterialIcons } from "@expo/vector-icons";
 import AppButton from "./app/components/AppButton";
 import Card from "./app/components/Card";
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import MessageScreen from "./app/screens/MessageScreen";
 
 export default function App() {
   // return <WelcomeScreen />;
-  
+
   return (
-    <View
-      style={{
-        backgroundColor: "#f8f4f4",
-        padding: 20,
-        paddingTop: 100,
-      }}
-    >
-      <Card
-        title="Red jacket for sale"
-        subtitle="$100"
-        image={require("./app/assets/jacket.jpg")}
-      />
-    </View>
+    // <ListingDetailsScreen />
+    // <ViewImageScreen />
+    <MessageScreen />
+    // <View
+    //   style={{
+    //     backgroundColor: "#f8f4f4",
+    //     padding: 20,
+    //     paddingTop: 100,
+    //   }}
+    // >
+    //   <Card
+    //     title="Red jacket for sale"
+    //     subtitle="$100"
+    //     image={require("./app/assets/jacket.jpg")}
+    //   />
+    // </View>
   );
 }
 
