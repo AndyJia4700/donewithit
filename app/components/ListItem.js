@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  TouchableOpacity,
-  TouchableHighlight,
-} from "react-native";
+import { StyleSheet, View, Image, TouchableHighlight } from "react-native";
 import AppText from "./AppText/AppText";
 import colors from "../config/colors";
 
