@@ -5,7 +5,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function ListItemDeleteAction() {
   return (
-    <TouchableWithoutFeedback onPress={}>
+    <TouchableWithoutFeedback onPress={console.log()}>
       <View style={styles.container}>
         <MaterialCommunityIcons name="trash-can" size={35} color="white" />
       </View>

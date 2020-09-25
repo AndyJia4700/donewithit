@@ -54,9 +54,9 @@ export default function MessageScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  //   screen: {
-  //     // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  //     paddingTop: Constants.statusBarHeight,
-  //   },
-});
+// const styles = StyleSheet.create({
+//   screen: {
+//     // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+//     paddingTop: Constants.statusBarHeight,
+//   },
+// });
